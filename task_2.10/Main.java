@@ -4,20 +4,13 @@
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите массив из 4 элементов: ");
-        int [] mas = {0,0,0,0};
+        int [] mas = {4,5,5,7,3,2};
         Boolean b = false;
-        for (int i = 0; i < 4; i++) {
-            mas[i] = scan.nextInt();
+        for (int i = 0; i < mas.length; i++) {
             if ((i>0)&&(mas[i]==mas[i-1])) {
                 b = true;
             }
         }
-        if (b) {
-            System.out.println("да");
-        } else {
-            System.out.println("нет");
-        }
+        System.out.println(b?"да":"нет");
     }
 }
