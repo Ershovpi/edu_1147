@@ -4,7 +4,7 @@
 
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         System.out.println(compare(5,7)?"равны":"не равны");
     }
     
