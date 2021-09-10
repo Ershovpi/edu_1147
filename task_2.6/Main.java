@@ -4,7 +4,15 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите a: ");
+        int a = scanner.nextInt();
+        System.out.print("Введите b: ");
+        int b = scanner.nextInt();
+        if (a%b==0) {
+            System.out.println("Делится "+a/b);
+        } else {
+            System.out.println("Делится с остатком "+a%b);
+        }
     }
 }
