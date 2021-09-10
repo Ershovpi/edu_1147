@@ -11,7 +11,10 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        String[] str = {"МАМА","МЫЛА","РАМУ"};
+        for (int i = 0; i < 3; i++) {
+            System.out.println(str[i]+str[(i+1)%3]+str[(i+2)%3]);
+            System.out.println(str[i]+str[(i+2)%3]+str[(i+1)%3]);
+        }   
     }
 }
