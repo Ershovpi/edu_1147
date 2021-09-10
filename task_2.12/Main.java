@@ -7,7 +7,7 @@
 Пример для списка 2, 4, 4, 4, 8, 8, 4, 12, 12, 14:
 3
 */
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
