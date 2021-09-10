@@ -6,7 +6,10 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+           System.out.println(isMore10(7,3)?"сумма > 10":"сумма <= 10");
+    }
 
+    public static Boolean isMore10 (int a, int b) {
+        return a+b>10;
     }
 }
