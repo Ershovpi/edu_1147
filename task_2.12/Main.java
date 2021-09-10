@@ -10,7 +10,22 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите массив из 10 элементов: ");
+        int [] mas = {0,1,2,3,4,5,6,7,8,9};
+        int max = 1;
+        int n = 1;
+        for (int i = 0; i < 10; i++) {
+            mas[i] = scan.nextInt();
+             if ((i>0)&&(mas[i])==mas[i-1]) {
+                n++;
+             } else {
+                if (n>max) {
+                    max = n;
+                }
+                n = 1;
+             }
+        }
+        System.out.println(max);
     }
 }
