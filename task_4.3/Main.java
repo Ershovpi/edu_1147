@@ -13,9 +13,21 @@
 •	Если некий кот1 выигрывает у кота кот2, то кот2 должен проигрывать коту кот1.
 */
 
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
+        Cat cat1 = new Cat();
+        Cat cat2 = new Cat();
+        System.out.println("Введите возраст, вес и силу 1-го кота");
+        cat1.age = scanner.nextInt();
+        cat1.weight = scanner.nextInt();
+        cat1.strength = scanner.nextInt();
+        System.out.println("Введите возраст, вес и силу 2-го кота");
+        cat2.age = scanner.nextInt();
+        cat2.weight = scanner.nextInt();
+        cat2.strength = scanner.nextInt();
+        System.out.println("Первый кот "+(cat1.fight(cat2)?"сильнее":"слабее")+" второго кота");
     }
 }
 
@@ -24,10 +36,12 @@ class Cat {
     public int weight;
     public int strength;
 
-    public Cat() {
+    public Cat(){
     }
 
     public boolean fight(Cat anotherCat) {
-        //напишите тут ваш код
+        return  (this.age > anotherCat.age && this.weight > anotherCat.weight) ||
+                (this.age > anotherCat.age && this.strength > anotherCat.strength) ||
+                (this.weight > anotherCat.weight && this.strength > anotherCat.strength);
     }
 }
