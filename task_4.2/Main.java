@@ -21,7 +21,7 @@ public class Main {
     }
 }
 
-class Dog {
+public class Dog {
     private String name = "безымянный пёс";
     private int age = 0;
     void setName(String name) {
