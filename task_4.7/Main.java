@@ -10,15 +10,24 @@
 
 public class Main {
     public static void main(String[] args){
+        Fox fox = new Fox("лиса",4, "цвет");
+        System.out.println("Лиса "+fox.getName()+" "+fox.getColor());
     }
 }
 
-interface Animal {
-    Color getColor();
+interface Animal{
+    String getColor();
+    String getName();
 }
-    
-class Fox {
+
+class Fox implements Animal{
+    public Fox(String nickname, int age, String color) {}
+    @Override
     public String getName() {
-        return "Fox";
+        return "Патрикеевна";
+    }
+    @Override
+    public String getColor() {
+        return "рыжая";
     }
 }
