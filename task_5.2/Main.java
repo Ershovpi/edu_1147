@@ -17,30 +17,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/* 
-Модернизация ПО
-*/
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        List<String> list = new ArrayList<>();
+        List<String> familyList = new ArrayList<>();
+        List<String> cityList = new ArrayList<>();
         while (true) {
+            String city = scanner.nextLine();
+            if (city.isEmpty()) break;
+            cityList.add(city);
             String family = scanner.nextLine();
-            if (family.isEmpty()) {
-                break;
-            }
-
-            list.add(family);
+            familyList.add(family);
         }
 
-        // Read the house number
-        int houseNumber = scanner.nextInt();
-
-        if (0 <= houseNumber && houseNumber < list.size()) {
-            String familyName = list.get(houseNumber);
-            System.out.println(familyName);
-        }
+        System.out.println("Введите город для поиска: ");
+        String city = scanner.nextLine();
+        String msg = "Такого города нет в списке";
+        for (int i = 0; i < cityList.size(); i++)
+            if (cityList.get(i).equals(city))
+                msg = familyList.get(i);
+        System.out.println(msg);
     }
 }
