@@ -26,7 +26,6 @@ public class Server {
                         String text;
                         try {
                             String userName;
-                            Boolean isUsed = false;
                             currentUser.getOut().writeUTF("Ваше имя: ");
                             userName = currentUser.getIn().readUTF();
                             for (User user : users)
